@@ -22,21 +22,22 @@
 
 .input_submit {
    position: absolute;
-   width: 50px;
+   width: 100 px;
    height: 50px;
    margin: 12px;
+   padding: 10px;
    border-radius: 50px;
    right: 0px;
    border: none;
    font-size: 15px;
-   background-color: #2f74c0;
+   background-color: #2fc058;
    color:white;
    transition: 0.2s all;
    box-shadow: 0 0 10px black;
 }
 
 .input_submit:hover {
-   background-color: #388ae2;
+   background-color: #38e257;
 }
 
 .input_submit:active {
@@ -57,7 +58,7 @@
    border-radius: 5px;
    padding: 20px;
    margin-top: 15px;
-   background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+   background-image: url("https://img.freepik.com/free-photo/view-white-crumpled-paper_1194-7544.jpg?");
    transition: 0.2s;
  }
 
@@ -79,6 +80,9 @@
  }
 
  @media (max-width: 1200px) {
+   .input {
+      width: 70%;
+   }
    .todos_single {
       width: 40%;
    }
