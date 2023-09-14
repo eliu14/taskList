@@ -1,0 +1,141 @@
+@use 'globals';
+@use 'components';
+@use 'util';
+
+.input {
+   display: flex;
+   width: 95%;
+   position: relative;
+   align-items: center;
+}
+
+.input_box {
+   width: 100%;
+   border-radius: util.rem(50);
+   padding: util.rem(20) util.rem(30);
+   font-size: util.rem(25);
+   border: none;
+   transition: 0.2s;
+   box-shadow: inset 0 0 util.rem(5) black;
+}
+
+.input_box:focus {
+   box-shadow: 0 0 util.rem(10) util.rem(1000) rgba(0, 0, 0, 0.5);
+   outline: none;
+}
+
+.input_submit {
+   position: absolute;
+   width: util.rem(100);
+   height: util.rem(50);
+   margin: util.rem(12);
+   padding: util.rem(10);
+   border-radius: util.rem(50);
+   right: util.rem(0);
+   border: none;
+   font-size: util.rem(15);
+   background-color: var(--addTask-button);
+   color: var(--addTask-button-text);
+   transition: 0.2s all;
+   box-shadow: 0 0 util.rem(10) black;
+}
+
+.input_submit:hover {
+   background-color: var(--addTask-button-hover);
+}
+
+.input_submit:active {
+   transform: scale(0.8);
+   box-shadow: 0 0 util.rem(5) black;
+}
+
+.container {
+   display: flex;
+   width: 95%;
+   margin-top: util.rem(10);
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.todos {
+   display:flex;
+   width: 47.5%;
+   flex-direction: column;
+   padding: util.rem(15);
+   border-radius:  util.rem(5);
+   background-color: var(--todos-container);
+}
+
+.todos_heading {
+   font-size: util.rem(30);
+   color: var(--todos-heading);
+}
+
+.todos_single {
+   display: flex;
+   border-radius: util.rem(5);
+   padding: util.rem(20);
+   margin-top: util.rem(15);
+   background-image: url("https://img.freepik.com/free-photo/view-white-crumpled-paper_1194-7544.jpg?");
+   transition: 0.2s;
+ }
+
+ .todos_single:hover {
+   box-shadow: 0 0 util.rem(5) black;
+   transform: scale(1.03);
+ }
+
+ .todos_single--text {
+   flex: 1;
+   padding: util.rem(5);
+   border: none;
+   font-size: util.rem(20);
+ }
+
+ .todos_single--text:focus {
+   outline: none;
+ }
+
+ .icon {
+   margin-left: util.rem(10);
+   font-size: util.rem(25);
+   cursor: pointer;
+ }
+
+ .remove {
+   background-color: var(--completed-container);
+ }
+
+ .dragactive {
+   background-color: var(--todos-drag-active);
+ }
+
+ .dragcomplete {
+   background-color: var(--completed-drag-active);
+ }
+
+ .drag {
+   box-shadow: 0 0 util.rem(20) black;
+ }
+
+ @include util.breakpoint(large){
+   .todos {
+      width: 45%;
+   }
+ }
+
+// @media (max-width: util.rem(700)) {
+ @include util.breakpoint(medium) {
+   .input {
+      width: 95%;
+   }
+   .todos {
+      width: 95%;
+      margin-bottom: util.rem(10);
+   }
+
+   .container{
+      width: 95%;
+      flex-direction: column;
+   }
+ }
