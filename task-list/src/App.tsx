@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './dist/App.css';
 import InputField from "./components/inputField";
 import { Todo } from './components/model';
 import TodoList from './components/TodoList';
@@ -26,9 +26,7 @@ const App: React.FC = () => {
       return;
 
     let add, active = todos, complete=completedTodos;
-    console.log("add :" + add);
-    console.log("active:" + active)
-    console.log("complete: " + complete)
+    
     // Remove from source list 
     if (source.droppableId==="TodosList"){ // from todo list
       add = active[source.index];

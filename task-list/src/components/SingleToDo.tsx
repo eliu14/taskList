@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Todo } from './model';
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
-import './styles.css';
+import '../dist/styles.css';
 import { Draggable } from 'react-beautiful-dnd';
 
 type Props = {

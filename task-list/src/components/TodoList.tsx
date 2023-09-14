@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import '../dist/styles.css';
 import { Todo } from './model';
 import SingleToDo from './SingleToDo';
 import {Droppable} from 'react-beautiful-dnd';
