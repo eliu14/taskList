@@ -58,6 +58,10 @@
   box-shadow: 0 0 0.3125rem black;
 }
 
+input.todos_single--text {
+  width: 100%;
+}
+
 .container {
   display: flex;
   width: 95%;
@@ -127,14 +131,14 @@
   box-shadow: 0 0 1.25rem black;
 }
 
-@media (min-width: 64em) {
+@media (max-width: 64em) {
   .todos {
     width: 45%;
   }
 }
-@media (min-width: 40em) {
+@media (max-width: 40em) {
   .input {
-    width: 95%;
+    width: 80%;
   }
   .todos {
     width: 95%;

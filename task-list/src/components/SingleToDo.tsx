@@ -60,12 +60,12 @@ const SingleToDo = ({index, todo, todos, setTodos}: Props) => {
                   value={editTodo} 
                   onChange={(e) => setEditTodo(e.target.value)}
                   className="todos_single--text"
-                  />
-            ) : todo.isDone ? (
-               <s className="todos_single--text">{todo.todo}</s>
-            ): (
-               <span className="todos_single--text">{todo.todo}</span>
-            )
+               />) : 
+               todo.isDone ? (
+                  <s className="todos_single--text">{todo.todo}</s>
+               ): (
+                  <span className="todos_single--text">{todo.todo}</span>
+               )
             }
             <div>
                <span 

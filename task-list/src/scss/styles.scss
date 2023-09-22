@@ -49,6 +49,10 @@
    box-shadow: 0 0 util.rem(5) black;
 }
 
+input.todos_single--text {
+   width: 100%;
+}
+
 .container {
    display: flex;
    width: 95%;
@@ -122,12 +126,14 @@
    .todos {
       width: 45%;
    }
+   input.todos_single--text {
+      //width: 45%;
+   }
  }
 
-// @media (max-width: util.rem(700)) {
  @include util.breakpoint(medium) {
    .input {
-      width: 95%;
+      width: 80%;
    }
    .todos {
       width: 95%;
@@ -137,5 +143,8 @@
    .container{
       width: 95%;
       flex-direction: column;
+   }
+   input.todos_single--text {
+      //width: 80%
    }
  }
